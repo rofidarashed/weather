@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather/core/utils/strings.dart';
 import 'package:weather/core/widgets/password_text_field.dart';
 import 'package:weather/core/widgets/screen_color_custom.dart';
 import 'package:weather/features/auth/presentation/widgets/email_input_button.dart';
@@ -39,7 +40,7 @@ class _SignupPageState extends State<SignupPage> {
                           children: [
                             SizedBox(height: 60),
                             Text(
-                              "Create your account now!",
+                             AppStrings.createAccount,
                               style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.normal,
@@ -50,13 +51,13 @@ class _SignupPageState extends State<SignupPage> {
                             SizedBox(height: 20),
                             PasswordTextField(
                               controller: passwordController,
-                              labelText: "Password",
+                              labelText:AppStrings.password,
                             ),
 
                             SizedBox(height: 20),
                             PasswordTextField(
                               controller: repeatPasswordController,
-                              labelText: "Confirm Password",
+                              labelText: AppStrings.confirmPassword,
                             ),
 
                             HaveAccountRow(),

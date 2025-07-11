@@ -12,7 +12,7 @@ class ScreenColor extends StatelessWidget {
       height: MediaQuery.of(context).size.height,
       decoration: BoxDecoration(
         gradient: RadialGradient(
-          colors: [AppColors().enabledBorder, Colors.transparent],
+          colors: [AppColors.enabledBorder, Colors.transparent],
           radius: 2,
           center: Alignment.bottomLeft,
         ),

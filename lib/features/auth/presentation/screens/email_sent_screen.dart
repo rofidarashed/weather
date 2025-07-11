@@ -19,14 +19,14 @@ class EmailSent extends StatelessWidget {
                 'Email has been sent',
                 style: TextStyle(
                   fontSize: 30,
-                  color: AppColors().white,
+                  color: AppColors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               Text(
                 textAlign: TextAlign.center,
                 'Make sure to check your spam or junk folder.',
-                style: TextStyle(color: AppColors().mainColor, fontSize: 20),
+                style: TextStyle(color: AppColors.mainColor, fontSize: 20),
               ),
               const SizedBox(height: 10),
             ],

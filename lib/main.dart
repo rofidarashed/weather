@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather/features/auth/cubit/auth_cubit.dart';
+import 'package:weather/features/auth/data/firebase_auth_service.dart';
 import 'package:weather/features/auth/presentation/screens/sign_up_screen.dart';
 import 'package:weather/firebase_options.dart';
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-      providers: [BlocProvider(create: (context) => AuthCubit())],
+      providers: [BlocProvider(create: (context) => AuthCubit(FirebaseAuthService()))],
 
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

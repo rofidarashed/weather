@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather/core/utils/colors.dart';
+import 'package:weather/core/utils/strings.dart';
 import 'package:weather/features/auth/presentation/screens/login_screen.dart';
 
 class HaveAccountRow extends StatelessWidget {
@@ -12,7 +13,7 @@ class HaveAccountRow extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text("Already have an account?"),
+        Text(AppStrings.alreadyHaveAnAccount),
         TextButton(
           onPressed: () => Navigator.push(
             context,
@@ -23,9 +24,9 @@ class HaveAccountRow extends StatelessWidget {
             ),
           ),
           child: Text(
-            "Log-in",
+            AppStrings.loginText,
             style: TextStyle(
-              color: AppColors().mainColor,
+              color: AppColors.mainColor,
             ),
           ),
         ),

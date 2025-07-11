@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather/core/utils/colors.dart';
+import 'package:weather/core/utils/strings.dart';
 import 'package:weather/core/widgets/password_text_field.dart';
 import 'package:weather/core/widgets/screen_color_custom.dart';
 import 'package:weather/features/auth/presentation/screens/forgot_password_screen.dart';
@@ -31,7 +32,7 @@ class LoginPage extends StatelessWidget {
                           Navigator.pop(context);
                         },
                         icon: Icon(Icons.arrow_back),
-                        color: Colors.white,
+                        color: AppColors.mainColor,
                       ),
                     ],
                   ),
@@ -41,7 +42,7 @@ class LoginPage extends StatelessWidget {
                       child: Column(
                         children: [
                           Text(
-                            "Login to your account",
+                            AppStrings.login,
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.normal,
@@ -52,7 +53,7 @@ class LoginPage extends StatelessWidget {
                           SizedBox(height: 20),
                           PasswordTextField(
                             controller: passwordController,
-                            labelText: "Password",
+                            labelText: AppStrings.password,
                           ),
 
                           TextButton(
@@ -65,8 +66,8 @@ class LoginPage extends StatelessWidget {
                               );
                             },
                             child: Text(
-                              "Forgot password?",
-                              style: TextStyle(color: AppColors().mainColor),
+                              AppStrings.forgotPassword,
+                              style: TextStyle(color: AppColors.mainColor),
                             ),
                           ),
                         ],

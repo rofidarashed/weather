@@ -1,5 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:weather/core/utils/strings.dart';
+import 'package:weather/core/widgets/custom_alert_dialog.dart';
 import 'package:weather/core/widgets/primary_button.dart';
 import 'package:weather/features/auth/presentation/screens/email_sent_screen.dart';
 import 'package:weather/features/auth/presentation/widgets/email_input_button.dart';
@@ -24,14 +26,15 @@ class ForgetPassword extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
-                        "Everybody forgets!",
+                        AppStrings.everyBodyForgets,
                         style: TextStyle(
                           fontSize: 30,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       Text(
-                        "We'll help you get right back.",
+                        AppStrings.weWillHelpYouGetRightBack,
+
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.normal,
@@ -44,24 +47,16 @@ class ForgetPassword extends StatelessWidget {
                 ),
               ),
               PrimaryButton(
-                text: "Reset Password",
+                text:                       AppStrings.resetPassword,
+
                 onPressed: () async {
                   try {
                     if (emailController.text.isEmpty) {
                       showDialog(
                         context: context,
                         builder: (context) {
-                          return AlertDialog(
-                            title: Text("Error"),
-                            content: Text("Please enter your e-mail"),
-                            actions: [
-                              TextButton(
-                                onPressed: () {
-                                  Navigator.pop(context);
-                                },
-                                child: Text("Okay"),
-                              ),
-                            ],
+                          return CustomedAlertDialog(
+                            content: AppStrings.pleaseEnterYourEmail,
                           );
                         },
                       );
@@ -91,17 +86,8 @@ class ForgetPassword extends StatelessWidget {
                       showDialog(
                         context: context,
                         builder: (context) {
-                          return AlertDialog(
-                            title: Text("Error"),
-                            content: Text("An unexpected error has occurred"),
-                            actions: [
-                              TextButton(
-                                onPressed: () {
-                                  Navigator.pop(context);
-                                },
-                                child: Text("Okay"),
-                              ),
-                            ],
+                          return CustomedAlertDialog(
+                            content: AppStrings.anUnexpectedErrorHasOccurred,
                           );
                         },
                       );
@@ -111,17 +97,8 @@ class ForgetPassword extends StatelessWidget {
                       showDialog(
                         context: context,
                         builder: (context) {
-                          return AlertDialog(
-                            title: Text("Error"),
-                            content: Text("An unexpected error has occurred"),
-                            actions: [
-                              TextButton(
-                                onPressed: () {
-                                  Navigator.pop(context);
-                                },
-                                child: Text("Okay"),
-                              ),
-                            ],
+                          return CustomedAlertDialog(
+                            content: AppStrings.anUnexpectedErrorHasOccurred,
                           );
                         },
                       );

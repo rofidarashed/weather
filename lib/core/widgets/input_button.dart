@@ -32,22 +32,22 @@ class InputTextButton extends StatelessWidget {
         keyboardType: textInputType,
         inputFormatters: textInputFormatter,
         decoration: InputDecoration(
-          prefixIcon: Icon(prefixIcon, color: AppColors().mainColor),
+          prefixIcon: Icon(prefixIcon, color: AppColors.mainColor),
           label: Text(labelText),
-          labelStyle: TextStyle(color: AppColors().mainColor),
-          floatingLabelStyle: TextStyle(color: AppColors().mainColor),
+          labelStyle: TextStyle(color: AppColors.mainColor),
+          floatingLabelStyle: TextStyle(color: AppColors.mainColor),
           hintText: hintText,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(20.0)),
-            borderSide: BorderSide(color: AppColors().enabledBorder),
+            borderSide: BorderSide(color: AppColors.enabledBorder),
           ),
           filled: false,
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(20.0)),
-            borderSide: BorderSide(color: AppColors().focusedborder),
+            borderSide: BorderSide(color: AppColors.focusedborder),
           ),
 
-          hintStyle: TextStyle(color: AppColors().hintTextColor),
+          hintStyle: TextStyle(color: AppColors.hintTextColor),
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
         ),
       ),
