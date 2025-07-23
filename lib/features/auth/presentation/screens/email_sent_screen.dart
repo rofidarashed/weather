@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:weather/core/utils/colors.dart';
 
 class EmailSent extends StatelessWidget {
@@ -9,12 +10,12 @@ class EmailSent extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
-        padding: const EdgeInsets.all(23),
+        padding:  EdgeInsets.all(23.r),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(height: 30),
+               SizedBox(height: 30.h),
               Text(
                 'Email has been sent',
                 style: TextStyle(
@@ -28,7 +29,7 @@ class EmailSent extends StatelessWidget {
                 'Make sure to check your spam or junk folder.',
                 style: TextStyle(color: AppColors.mainColor, fontSize: 20),
               ),
-              const SizedBox(height: 10),
+              SizedBox(height: 10.h),
             ],
           ),
         ),

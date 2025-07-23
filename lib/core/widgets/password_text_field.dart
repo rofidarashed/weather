@@ -30,7 +30,7 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
         controller: widget.controller,
         obscureText: _obscureText,
         decoration: InputDecoration(
-          hintText:AppStrings.hintPassword,
+          hintText: AppStrings.hintPassword,
           labelStyle: TextStyle(color: AppColors.mainColor),
           floatingLabelStyle: TextStyle(color: AppColors.mainColor),
           labelText: widget.labelText,
@@ -54,7 +54,7 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(20),
-            borderSide: BorderSide(color: AppColors.focusedborder, width: 2),
+            borderSide: BorderSide(color: AppColors.mainColor),
           ),
           filled: false,
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),

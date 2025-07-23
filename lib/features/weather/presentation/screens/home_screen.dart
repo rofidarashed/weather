@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:weather/features/weather/presentation/cubit/weather_cubit.dart';
 import 'package:weather/features/weather/presentation/cubit/weather_state.dart';
 import 'package:weather/features/weather/presentation/widgets/build_chart_section.dart';
@@ -21,6 +22,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        height: 1.sh,
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
@@ -37,24 +39,24 @@ class HomeScreen extends StatelessWidget {
           child: SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
             child: Padding(
-              padding: const EdgeInsets.all(20.0),
+              padding: EdgeInsets.all(20.0.r),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   BuildHeaderSection(displayName: displayName),
-                  const SizedBox(height: 32),
+                  SizedBox(height: 20.h),
 
                   BlocBuilder<WeatherCubit, WeatherState>(
                     builder: (context, state) {
                       if (state is WeatherLoading) {
-                        return buildLoadingState();
+                        return buildLoadingState(context);
                       } else if (state is WeatherLoaded) {
                         return Column(
                           children: [
                             BuildCurrentWeatherCard(state: state),
-                            const SizedBox(height: 24),
+                            SizedBox(height: 20.h),
                             buildForecastSection(state),
-                            const SizedBox(height: 24),
+                            SizedBox(height: 20.h),
                             buildChartSection(state),
                           ],
                         );

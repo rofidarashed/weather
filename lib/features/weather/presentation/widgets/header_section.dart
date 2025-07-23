@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BuildHeaderSection extends StatelessWidget {
   const BuildHeaderSection({
@@ -10,7 +11,7 @@ class BuildHeaderSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 16),
+      padding:  EdgeInsets.symmetric(vertical: 16.h),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -18,21 +19,21 @@ class BuildHeaderSection extends StatelessWidget {
             shaderCallback: (bounds) => LinearGradient(
               colors: [Colors.blue[300]!, Colors.blue[600]!],
             ).createShader(bounds),
-            child: const Text(
+            child:  Text(
               "Hello",
               style: TextStyle(
-                fontSize: 28,
+                fontSize: 28.sp,
                 fontWeight: FontWeight.w300,
                 color: Colors.white,
                 letterSpacing: 0.5,
               ),
             ),
           ),
-          const SizedBox(height: 4),
+          SizedBox(height: 4.h),
           Text(
             displayName ?? "User",
             style: TextStyle(
-              fontSize: 22,
+              fontSize: 22.sp,
               color: Colors.white,
               fontWeight: FontWeight.w600,
               letterSpacing: 0.3,
