@@ -6,6 +6,7 @@ import 'package:weather/features/auth/cubit/auth_cubit.dart';
 import 'package:weather/features/auth/data/firebase_auth_service.dart';
 import 'package:weather/features/auth/presentation/screens/sign_up_screen.dart';
 import 'package:weather/features/weather/presentation/cubit/weather_cubit.dart';
+import 'package:weather/features/weather/presentation/screens/home_screen.dart';
 import 'package:weather/firebase_options.dart';
 
 void main() async {
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
           ],
           child: MaterialApp(
             debugShowCheckedModeBanner: false,
-            home: SignupPage(),
+            home: HomeScreen(),
           ),
         );
       },

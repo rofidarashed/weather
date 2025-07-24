@@ -9,13 +9,19 @@ class WeatherRepositoryImpl implements WeatherRepository {
   WeatherRepositoryImpl(this.remoteDataSource);
 
   @override
-  Future<List<WeatherEntity>> getThreeDayForecast(String location) async {
+  Future<List<WeatherEntity>> getSevenDayForecast(String location) async {
     final models = await remoteDataSource.getThreeDayForecast(location);
-    return models.map((model) => WeatherEntity(
-      date: model.date,
-      minTemp: model.minTemp,
-      maxTemp: model.maxTemp,
-      avgTemp: model.avgTemp,
-    )).toList();
+    return models
+        .map(
+          (model) => WeatherEntity(
+            date: model.date ?? '',
+            minTemp: model.minTemp ?? 0,
+            maxTemp: model.maxTemp ?? 0,
+            avgTemp: model.avgTemp ?? 0,
+            condition: model.condition,
+            humidity: model.humidity,
+          ),
+        )
+        .toList();
   }
 }

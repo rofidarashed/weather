@@ -9,15 +9,20 @@ class WeatherRemoteDataSource {
     try {
       final response = await _dio.get(
         'https://api.weatherapi.com/v1/forecast.json',
-        queryParameters: {
-          'key': _apiKey,
-          'q': location,
-          'days': 3,
-        },
+        queryParameters: {'key': _apiKey, 'q': location, 'days': 7},
       );
 
+      final current = response.data['current'];
+
       final List forecast = response.data['forecast']['forecastday'];
-      return forecast.map((e) => WeatherModel.fromJson(e)).toList();
+
+      return forecast.map((day) {
+        return WeatherModel.fromJson({
+          'date': day['date'],
+          'day': day['day'],
+          'current': current,
+        });
+      }).toList();
     } catch (e) {
       throw Exception('Failed to fetch weather: $e');
     }

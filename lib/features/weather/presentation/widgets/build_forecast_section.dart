@@ -11,7 +11,7 @@ Widget buildForecastSection(WeatherLoaded state) {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "3-Day Forecast",
+          "7-Day Forecast",
           style: TextStyle(
             color: Colors.white,
             fontSize: 21.sp,
