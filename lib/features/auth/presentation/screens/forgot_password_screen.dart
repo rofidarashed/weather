@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:weather/core/utils/strings.dart';
 import 'package:weather/core/widgets/custom_alert_dialog.dart';
 import 'package:weather/core/widgets/primary_button.dart';
@@ -36,19 +37,18 @@ class ForgetPassword extends StatelessWidget {
                         AppStrings.weWillHelpYouGetRightBack,
 
                         style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 20.sp,
                           fontWeight: FontWeight.normal,
                         ),
                       ),
-                      SizedBox(height: 40),
+                      SizedBox(height: 40.h),
                       emailInputButton(emailController: emailController),
                     ],
                   ),
                 ),
               ),
               PrimaryButton(
-                text:                       AppStrings.resetPassword,
-
+                text: AppStrings.resetPassword,
                 onPressed: () async {
                   try {
                     if (emailController.text.isEmpty) {

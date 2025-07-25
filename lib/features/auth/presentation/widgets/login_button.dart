@@ -5,7 +5,7 @@ import 'package:weather/core/widgets/custom_alert_dialog.dart';
 import 'package:weather/core/widgets/primary_button.dart';
 import 'package:weather/features/auth/cubit/auth_cubit.dart';
 import 'package:weather/features/auth/cubit/auth_state.dart';
-import 'package:weather/features/home/presentation/screens/home_screen.dart';
+import 'package:weather/features/weather/presentation/screens/home_screen.dart';
 
 Widget loginButton(
   BuildContext context, {
@@ -22,7 +22,7 @@ Widget loginButton(
       } else if (state is AuthLoginSuccess) {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (_) => const HomeScreen()),
+          MaterialPageRoute(builder: (_) =>  HomeScreen()),
         );
       }
     },

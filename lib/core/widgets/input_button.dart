@@ -44,7 +44,7 @@ class InputTextButton extends StatelessWidget {
           filled: false,
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(20.0)),
-            borderSide: BorderSide(color: AppColors.focusedborder),
+            borderSide: BorderSide(color: AppColors.mainColor),
           ),
 
           hintStyle: TextStyle(color: AppColors.hintTextColor),
