@@ -8,11 +8,13 @@ class PrimaryButton extends StatelessWidget {
     required this.text,
     required this.onPressed,
     this.enabled = true,
+    this.color,
   });
 
   final String text;
   final VoidCallback onPressed;
   final bool enabled;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +23,7 @@ class PrimaryButton extends StatelessWidget {
       height: 50.h,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          backgroundColor: AppColors.mainColor,
+          backgroundColor:color?? AppColors.mainColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
