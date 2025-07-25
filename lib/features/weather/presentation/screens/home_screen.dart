@@ -11,8 +11,9 @@ import 'package:weather/features/weather/presentation/widgets/build_error_state.
 import 'package:weather/features/weather/presentation/widgets/build_forecast_section.dart';
 import 'package:weather/features/weather/presentation/widgets/build_loading_state.dart';
 import 'package:weather/features/weather/presentation/widgets/current_weather_card.dart';
-import 'package:weather/features/weather/presentation/widgets/glassmorphism_decoration.dart';
 import 'package:weather/features/weather/presentation/widgets/header_section.dart';
+import 'package:weather/features/weather/presentation/widgets/not_suitable_training.dart';
+import 'package:weather/features/weather/presentation/widgets/suitable_training.dart';
 
 class HomeScreen extends StatelessWidget {
   final user = FirebaseAuth.instance.currentUser;
@@ -106,46 +107,5 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-class NotSuitabletoTraining extends StatelessWidget {
-  const NotSuitabletoTraining({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      padding: EdgeInsets.all(16.r),
-      decoration: glassmorphismDecoration(color: Colors.red.withOpacity(0.5)),
-      child: Text(
-        "The weather is not suitable for training ⛔",
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 18.sp,
-          fontWeight: FontWeight.bold,
-        ),
-        textAlign: TextAlign.center,
-      ),
-    );
-  }
-}
 
-class SuitabletoTraining extends StatelessWidget {
-  const SuitabletoTraining({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      padding: EdgeInsets.all(16.r),
-      decoration: glassmorphismDecoration(color: Colors.green.withOpacity(0.5)),
-      child: Text(
-        "The weather is suitable for training 🏃‍♂️",
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 18.sp,
-          fontWeight: FontWeight.bold,
-        ),
-        textAlign: TextAlign.center,
-      ),
-    );
-  }
-}
