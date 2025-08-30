@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
 
 class AIModelService {
   final Dio _dio = Dio();
@@ -9,10 +10,9 @@ class AIModelService {
         'http://52.58.170.254:5000/predict',
         data: {'features': features},
       );
-      print('AI prediction response::::::::: ${response.data}');
       return response.data['prediction'];
     } catch (e) {
-      print('AI prediction error: $e');
+      debugPrint('AI prediction error: $e');
       return null;
     }
   }
