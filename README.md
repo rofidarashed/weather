@@ -14,11 +14,14 @@ This project is a simple yet elegant weather application developed using the Flu
 - **Intuitive UI:** A clean and user-friendly interface for a seamless experience.
 - **AI-Powered Training Suitability:** Leverages an AI model to predict if the current weather is suitable for outdoor training.
 
+
 ## Screenshots
 
 <img src="https://github.com/user-attachments/assets/1f816ce7-2559-4f75-b898-7cdbf0bee5a5" width="300"> 
 <img src="https://github.com/user-attachments/assets/173206a5-e359-4ec1-8787-f5e323dad73d" width="300"> 
 <img src="https://github.com/user-attachments/assets/95c0cb85-f963-4f0a-8337-3d30da42a8f4" width="300">
+<img src="https://github.com/user-attachments/assets/5e3193c5-128e-474f-9b10-234e5b93404c" width="300">
+<img src="https://github.com/user-attachments/assets/fca4e190-55b4-4dfa-b86a-dfc63503f49d" width="300">
 <video src="https://github.com/user-attachments/assets/96a95e21-3001-4c6b-9c17-e318bbcd2436" width="300" autoplay loop muted></video>
 
 ## Tech Stack
