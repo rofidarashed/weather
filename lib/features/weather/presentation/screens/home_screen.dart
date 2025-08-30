@@ -74,7 +74,6 @@ class HomeScreen extends StatelessWidget {
                                 context
                                     .read<WeatherCubit>()
                                     .predictFromWeatherData(weatherModel);
-                                print('lalalalalalalalala');
                               },
                             ),
                             SizedBox(height: 20.h),

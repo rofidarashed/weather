@@ -18,7 +18,7 @@ def predict():
         prediction = model.predict(features)[0]
         return jsonify({'prediction': int(prediction)})
     except Exception as e:
-        print("🔥 ERROR in /predict:", e)
+        print("🔥 ERROR in /predict:", e) 
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
