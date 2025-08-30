@@ -19,6 +19,7 @@ This project is a simple yet elegant weather application developed using the Flu
 <img src="https://github.com/user-attachments/assets/1f816ce7-2559-4f75-b898-7cdbf0bee5a5" width="300"> 
 <img src="https://github.com/user-attachments/assets/173206a5-e359-4ec1-8787-f5e323dad73d" width="300"> 
 <img src="https://github.com/user-attachments/assets/95c0cb85-f963-4f0a-8337-3d30da42a8f4" width="300">
+<video src="https://github.com/user-attachments/assets/96a95e21-3001-4c6b-9c17-e318bbcd2436" width="300" autoplay loop muted></video>
 
 ## Tech Stack
 
@@ -61,3 +62,6 @@ Make sure you have the Flutter SDK installed on your machine.
     ```sh
     flutter run
     ```
+
+
+
