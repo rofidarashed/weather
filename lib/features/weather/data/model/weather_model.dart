@@ -17,9 +17,6 @@ class WeatherModel {
     this.avgTemp,
   });
   factory WeatherModel.fromJson(Map<String, dynamic> json) {
-    print("WeatherModel.fromJson json: ${json.keys}");
-    print("WeatherModel.fromJson day: ${json['day'].keys}");
-    print("WeatherModel.fromJson current: ${json['current']}");
     return WeatherModel(
       date: json['date'],
       minTemp: json['day']['mintemp_c'].toDouble()??0,
